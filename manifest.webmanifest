@@ -1,0 +1,19 @@
+{
+  "name": "eCoasters — eBike Tours & Rentals near Lisbon",
+  "short_name": "eCoasters",
+  "description": "Guided electric bike tours and all-terrain eBike rentals in Costa da Caparica and Almada, 15 minutes from Lisbon.",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#0D0D0D",
+  "background_color": "#0D0D0D",
+  "icons": [
+    {
+      "src": "/assets/brand/mark-lime.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ]
+}

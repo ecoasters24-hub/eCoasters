@@ -1,0 +1,899 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electric Bike Rental in Costa da Caparica & Lisbon | eCoasters</title>
+<meta name="description" content="Rent an an all-terrain eBike in Costa da Caparica, Almada and Lisbon’s south bank. Free local delivery, flexible rentals and rates from €22.50/day.">
+<link rel="canonical" href="https://www.ecoasters.pt/electric-bike-rental/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="eCoasters">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://www.ecoasters.pt/electric-bike-rental/">
+<meta property="og:title" content="Electric Bike Rental — Costa da Caparica &amp; Almada · eCoasters">
+<meta property="og:description" content="All-terrain eBikes with free local delivery in Costa da Caparica, Almada and Lisbon’s south bank. Rentals from €22.50/day.">
+<meta property="og:url" content="https://www.ecoasters.pt/electric-bike-rental/">
+<meta property="og:image" content="https://www.ecoasters.pt/assets/img/rental-hero.jpg">
+<meta property="og:image:alt" content="All-terrain electric bike available for rent in Costa da Caparica">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Electric Bike Rental in Costa da Caparica & Lisbon | eCoasters">
+<meta name="twitter:description" content="All-terrain eBikes with free local delivery. Flexible rentals from €22.50/day.">
+<meta name="twitter:image" content="https://www.ecoasters.pt/assets/img/rental-hero.jpg">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="icon" href="/assets/brand/mark-lime.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/brand/mark-lime.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Raleway:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/styles.css?v=96">
+<link rel="manifest" href="/manifest.webmanifest">
+
+<style>
+  /* Rental bike image gallery */
+  .bike-gallery {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .bike-gallery__stage {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid rgba(13, 13, 13, 0.14);
+    border-radius: 1.25rem;
+    background: #f4f4f4;
+  }
+
+  .bike-gallery__stage img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: clamp(0.5rem, 2vw, 1.5rem);
+    object-fit: contain;
+  }
+
+  .bike-gallery__thumbs {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+  }
+
+  .bike-gallery__thumb {
+    display: grid;
+    place-items: center;
+    min-width: 0;
+    aspect-ratio: 4 / 3;
+    padding: 0.35rem;
+    overflow: hidden;
+    border: 2px solid transparent;
+    border-radius: 0.8rem;
+    background: #f4f4f4;
+    cursor: pointer;
+    transition: border-color 180ms ease, transform 180ms ease;
+  }
+
+  .bike-gallery__thumb:hover { transform: translateY(-2px); }
+
+  .bike-gallery__thumb[aria-pressed="true"] {
+    border-color: var(--lime, #d8f000);
+  }
+
+  .bike-gallery__thumb:focus-visible {
+    outline: 3px solid var(--lime, #d8f000);
+    outline-offset: 3px;
+  }
+
+  .bike-gallery__thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+  }
+
+  /* Keep the complete Explore independently block centred and contained. */
+  #where-to-ride > .wrap {
+    width: min(calc(100% - 2rem), 1600px);
+    max-width: 1600px;
+    margin-inline: auto;
+  }
+
+  #where-to-ride .ride-ideas {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #where-to-ride .ride-ideas > article { min-width: 0; }
+
+  @media (max-width: 900px) {
+    #where-to-ride .ride-ideas {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 600px) {
+    .bike-gallery__stage { aspect-ratio: 1 / 1; }
+    .bike-gallery__thumbs { gap: 0.5rem; }
+
+    #where-to-ride > .wrap {
+      width: min(calc(100% - 1.5rem), 1600px);
+    }
+
+    #where-to-ride .ride-ideas { grid-template-columns: 1fr; }
+  }
+</style>
+
+<script>
+  document.documentElement.classList.add('js');
+  setTimeout(function () {
+    if (!window.__ecoastersReady) document.documentElement.classList.remove('js');
+  }, 2500);
+</script>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": [
+    "LocalBusiness",
+    "TouristInformationCenter"
+   ],
+   "@id": "https://www.ecoasters.pt/#org",
+   "name": "eCoasters",
+   "legalName": "Rotinas da Natureza, Lda",
+   "url": "https://www.ecoasters.pt/",
+   "telephone": "+351969638466",
+   "email": "ecoasters24@gmail.com",
+   "image": "https://www.ecoasters.pt/assets/img/hg-hero.jpg",
+   "logo": "https://www.ecoasters.pt/assets/brand/logo-full-lime.svg",
+   "priceRange": "€€",
+   "currenciesAccepted": "EUR",
+   "slogan": "Ride more. Explore more. Feel everything.",
+   "description": "Guided electric bike tours and all-terrain eBike rentals in Costa da Caparica and Almada, 15 minutes from Lisbon. RNAAT 1223/2024.",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Costa da Caparica",
+    "addressRegion": "Almada",
+    "postalCode": "2825",
+    "addressCountry": "PT"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "38.6446",
+    "longitude": "-9.2337"
+   },
+   "areaServed": [
+    {
+     "@type": "Place",
+     "name": "Costa da Caparica"
+    },
+    {
+     "@type": "Place",
+     "name": "Almada"
+    },
+    {
+     "@type": "Place",
+     "name": "Aroeira"
+    },
+    {
+     "@type": "Place",
+     "name": "Charneca da Caparica"
+    },
+    {
+     "@type": "Place",
+     "name": "Fonte da Telha"
+    },
+    {
+     "@type": "Place",
+     "name": "Trafaria"
+    },
+    {
+     "@type": "Place",
+     "name": "Pragal"
+    },
+    {
+     "@type": "Place",
+     "name": "Seixal"
+    },
+    {
+     "@type": "Place",
+     "name": "Lisbon"
+    }
+   ],
+   "knowsLanguage": [
+    "pt",
+    "en",
+    "es"
+   ],
+   "sameAs": [
+    "https://www.instagram.com/ecoasters.tours",
+    "https://www.facebook.com/people/ECoasters-Electric-Bike-Tours/61570017095799/",
+    "https://www.tiktok.com/@ecoasters",
+    "https://share.google/gUtsCcXPfASTYaQZ6"
+   ],
+   "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "50",
+    "bestRating": "5",
+    "worstRating": "1"
+   }
+  },
+  {
+   "@type": "Product",
+   "@id": "https://www.ecoasters.pt/electric-bike-rental/#product",
+   "name": "All-terrain electric bike rental — Costa da Caparica & Almada",
+   "description": "Rent an all-terrain electric bike in Costa da Caparica, Almada, Aroeira, Charneca da Caparica, Fonte da Telha and across the concelho de Almada. Free delivery. From €22.50/day — easy, effortless riding. Standard bikes on request.",
+   "image": "https://www.ecoasters.pt/assets/img/rental-hero.jpg",
+   "brand": {
+    "@id": "https://www.ecoasters.pt/#org"
+   },
+   "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "22.50",
+    "highPrice": "35.00",
+    "priceCurrency": "EUR",
+    "offerCount": "5",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.ecoasters.pt/electric-bike-rental/#book",
+    "areaServed": [
+     {
+      "@type": "Place",
+      "name": "Costa da Caparica"
+     },
+     {
+      "@type": "Place",
+      "name": "Almada"
+     },
+     {
+      "@type": "Place",
+      "name": "Aroeira"
+     },
+     {
+      "@type": "Place",
+      "name": "Charneca da Caparica"
+     },
+     {
+      "@type": "Place",
+      "name": "Fonte da Telha"
+     },
+     {
+      "@type": "Place",
+      "name": "Trafaria"
+     },
+     {
+      "@type": "Place",
+      "name": "Pragal"
+     },
+     {
+      "@type": "Place",
+      "name": "Seixal"
+     },
+     {
+      "@type": "Place",
+      "name": "Lisbon"
+     }
+    ],
+    "seller": {
+     "@id": "https://www.ecoasters.pt/#org"
+    }
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.ecoasters.pt/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Bike rental",
+     "item": "https://www.ecoasters.pt/electric-bike-rental/"
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="hdr" id="hdr">
+  <div class="hdr__in">
+    <a class="brand" href="/#top" aria-label="eCoasters — home">
+      <img class="brand__mark" src="/assets/brand/mark-lime.svg" alt="" width="308" height="212" decoding="async">
+      <span class="brand__txt">
+        <span class="brand__word">eCoasters</span>
+        <span class="brand__sub">e-bike adventures</span>
+      </span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="/tours/">Tours</a>
+      <a href="/electric-bike-rental/">Rentals</a>
+      <a href="/#about">About us</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#contact">Contact</a>
+      <a class="btn btn--lime btn--sm" href="/#book">Book your adventure <svg class="ico-arr" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+    </nav>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="phero phero--rental">
+  <div class="phero__media media" style="--photo:url('/assets/img/rental-hero.jpg')" role="img"
+       aria-label="An all-terrain Stilus electric bike on a forest trail"></div>
+  <div class="phero__scrim" aria-hidden="true"></div>
+  <div class="phero__in wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span>Bike rental</nav>
+    <p class="phero__tag">Ride on your own</p>
+    <h1 class="phero__h">Electric Bike Rental in Costa da Caparica</h1>
+    <p class="phero__badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h2l2-5h8l2 5h2v4h-2a2 2 0 1 1-4 0H9a2 2 0 1 1-4 0H3z"/></svg> Delivery to your accommodation included!</p>
+    <p class="hero__p">Rent an all-terrain electric bike and explore Costa da Caparica,
+  Almada and Lisbon’s south bank at your own pace. We deliver the
+  eBike directly to your hotel, accommodation or agreed meeting
+  point, with flexible rentals from half a day to a full week.</p>
+    <div class="hero__cta" style="margin-top:1.5rem">
+      <a class="btn btn--lime btn--lg" href="#book">Check availability
+        <svg class="ico-arr" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      <a class="btn btn--glass btn--lg" href="https://wa.me/351969638466">Check by WhatsApp <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-6.4-5.6c-.5-.9-.8-1.8-.8-2.6 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4-.1.5l-.4.5c-.1.2-.3.3-.1.6a8 8 0 0 0 3.7 3.2c.3.1.5.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l2 1c.3.1.4.2.5.3z"/></svg></a>
+    
+    </div>
+    <p class="booking-note">
+    No payment now. We’ll confirm bike availability and delivery details
+    within the day.
+    </p>
+    <ul class="hstrip">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 8.5a5 5 0 1 0 0 7M6 11h8M6 13.5h7"/></svg><span><b>From €22.50</b><span>Lower daily rates for longer rentals</span></span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg><span><b>All-terrain eBikes</b><span>Built for coastal roads and forest trails</span></span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h2l2-5h8l2 5h2v4h-2a2 2 0 1 1-4 0H9a2 2 0 1 1-4 0H3z"/></svg><span><b>Free delivery</b><span>To your hotel or accommodation</span></span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 7v5c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V7z"/><path d="m9 12 2 2 4-4"/></svg><span><b>Insured &amp; licensed</b><span>RNAAT 1223/2024</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<nav class="subnav" id="subnav" aria-label="On this page">
+  <div class="wrap subnav__in">
+      <a href="#ride">The bikes</a>
+      <a href="#included">How it works</a>
+      <a href="#know">Good to know</a>
+    <a class="btn btn--lime btn--sm subnav__cta" href="#book">From €22.50 · Book</a>
+  </div>
+</nav>
+
+<section class="sec sec--bone" id="ride">
+  <div class="wrap detail">
+    <div class="prose reveal">
+      <p class="eyebrow">Ride on your own</p>
+      <h2>Rent an All-Terrain Electric Bike</h2>
+      <p class="sec__lede" style="margin-bottom:1.5rem"> Our all-terrain electric bikes are designed for exploring Costa da
+  Caparica and the surrounding area independently. Ride along coastal
+  roads, through pine forest surroundings and between beaches without
+  worrying about hills or long distances.</p>
+      <p> Electric assistance makes each ride comfortable while allowing you
+  to choose your own pace. Rent a bike for half a day, a full day or
+  several days — the longer the rental, the lower the daily price.</p>
+      <p> Standard <strong>non-electric bikes are also available on request. </strong></p>
+      <div class="bike-gallery" data-bike-gallery>
+        <figure class="bike-gallery__stage">
+          <img
+            class="rental-shot"
+            data-bike-main
+            src="/assets/img/rental-bike-side.webp"
+            width="1396"
+            height="958"
+            alt="Stilus all-terrain electric rental bike, full side view"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
+
+        <div class="bike-gallery__thumbs" role="group" aria-label="Choose a bike view">
+          <button class="bike-gallery__thumb" type="button" aria-pressed="true"
+                  data-src="/assets/img/rental-bike-side.webp"
+                  data-width="1396" data-height="958"
+                  data-alt="Stilus all-terrain electric rental bike, full side view"
+                  aria-label="Show side view of the electric bike">
+            <img src="/assets/img/rental-bike-side.webp" width="1396" height="958" alt="" loading="lazy" decoding="async">
+          </button>
+
+          <button class="bike-gallery__thumb" type="button" aria-pressed="false"
+                  data-src="/assets/img/rental-bike-front.webp"
+                  data-width="1392" data-height="1142"
+                  data-alt="Stilus all-terrain electric rental bike viewed from the front"
+                  aria-label="Show front view of the electric bike">
+            <img src="/assets/img/rental-bike-front.webp" width="1392" height="1142" alt="" loading="lazy" decoding="async">
+          </button>
+
+          <button class="bike-gallery__thumb" type="button" aria-pressed="false"
+                  data-src="/assets/img/rental-bike-rear.webp"
+                  data-width="1396" data-height="1088"
+                  data-alt="Stilus all-terrain electric rental bike viewed from the rear"
+                  aria-label="Show rear view of the electric bike">
+            <img src="/assets/img/rental-bike-rear.webp" width="1396" height="1088" alt="" loading="lazy" decoding="async">
+          </button>
+        </div>
+      </div>
+    </div>
+  
+
+    <aside class="buy reveal">
+      <table class="rates">
+        <h2>Bike rental prices</h2>
+        <thead><tr><th scope="col">How long</th><th scope="col">Per bike</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">1–2 days</th><td class="num">€35.00</td></tr>
+          <tr><th scope="row">3–4 days</th><td class="num">€30.00</td></tr>
+          <tr><th scope="row">5–6 days</th><td class="num">€25.00</td></tr>
+          <tr class="rates__best"><th scope="row">7+ days <span class="rates__badge">Best value</span></th><td class="num">€22.50</td></tr>
+          <tr><th scope="row">Half day</th><td class="num">€25.00</td></tr>
+        </tbody>
+      </table>
+      <p class="rates__note">  Multi-day prices are charged <strong>per bike, per day</strong>. Free local delivery
+  is included in eligible areas. Contact us for availability and
+  delivery confirmation.</p>
+      <a class="btn btn--lime btn--full btn--lg" href="#book">Check availability
+        <svg class="ico-arr" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      
+      <div class="direct">
+        <a class="direct__a" href="https://wa.me/351969638466">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/><path d="M8.5 8.8c.2-.5.4-.5.7-.5h.5l.9 2-.6.8a8 8 0 0 0 3.7 3.2l.8-.7 2 1c0 .5-.6 1.2-1.1 1.3-.5.1-1.1.2-3-.6a11 11 0 0 1-4.2-4c-.6-1-.8-2-.7-2.5z"/></svg>
+          <span><strong>WhatsApp</strong><br>+351 969 638 466</span>
+        </a>
+      </div>
+      <p class="buy__fine">RNAAT 1223/2024 · Free delivery included</p>
+    </aside>
+  </div>
+</section>
+
+<section class="sec sec--sand" id="bike-specifications">
+  <div class="wrap wrap--narrow">
+    <header class="sec__head reveal" style="text-align:center;margin-inline:auto;margin-bottom:2rem">
+      <p class="eyebrow">Built for exploring</p>
+      <h2 class="sec__h">All-Terrain eBikes With Up to 80 km of Range</h2>
+      <p class="sec__lede" style="margin-inline:auto">Our Stilus electric bikes combine comfortable riding with all-terrain capability, making them suitable for exploring the coast, local roads and forest surroundings around Costa da Caparica and Almada.</p>
+      <p class="sec__lede" style="margin-inline:auto">The battery provides an estimated range of up to 80 km, depending on the assistance level, route, terrain, weather conditions and rider weight.</p>
+    </header>
+  </div>
+  <div class="wrap">
+    <div class="stats reveal">
+      <div class="stats__i"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H3z"/><path d="M19 10.5h1.5v3H19"/><path d="M7 10v4"/></svg></span><span><b class="stats__n">Up to 80 km</b><span class="stats__l">Estimated battery range</span></span></div>
+      <div class="stats__i"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span><span><b class="stats__n">Electric assistance</b><span class="stats__l">More comfort on hills and longer rides</span></span></div>
+      <div class="stats__i"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 20h14zM12 9l3 7H9z"/></svg></span><span><b class="stats__n">All-terrain design</b><span class="stats__l">Suitable for roads and accessible trails</span></span></div>
+      <div class="stats__i"><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg></span><span><b class="stats__n">Easy to operate</b><span class="stats__l">A quick briefing is provided before every rental</span></span></div>
+    </div>
+  </div>
+  <div class="wrap wrap--narrow">
+    <p class="rental__fine">Actual battery range varies according to the selected assistance mode, terrain, route, weather conditions and rider characteristics.</p>
+  </div>
+</section>
+
+<section class="sec" id="whats-included">
+  <div class="wrap wrap--narrow">
+    <header class="sec__head reveal" style="text-align:center;margin-inline:auto;margin-bottom:2rem">
+      <p class="eyebrow">Ready to ride</p>
+      <h2 class="sec__h">Everything You Need Is Included</h2>
+      <p class="sec__lede" style="margin-inline:auto">Your eBike is delivered ready to ride, with the essential equipment you need to explore Costa da Caparica and the surrounding area independently.</p>
+    </header>
+    <div class="prose reveal">
+      <ul class="ticks">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span><strong>All-terrain electric bike.</strong> A comfortable Stilus eBike designed for coastal roads, forest surroundings and everyday exploration.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span><strong>Safety helmet.</strong> A helmet is provided with every rental and must be used while riding.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span><strong>Bike lock.</strong> Secure the bike whenever you stop to explore, eat or visit the beach.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span><strong>Phone holder.</strong> Keep your phone visible for navigation without having to hold it while riding.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span><strong>Local delivery.</strong> We arrange delivery directly to your hotel, accommodation or another agreed location.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span><strong>Quick riding briefing.</strong> Before you leave, we explain how to operate the eBike and use its electric assistance safely.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--dark" id="included">
+  <div class="wrap">
+    <div class="cols">
+      <div class="prose reveal">
+        <p class="eyebrow eyebrow--lime">Simple and flexible</p>
+        <h2>How Our eBike Rental Works</h2>
+        <ol class="ticks">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span><strong>Choose your rental dates</strong> <br />Tell us when you would like to collect and return the bike,
+      how many bikes you need and where you are staying.</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span><strong>We confirm availability</strong>  <br />Our team checks bike availability and confirms the delivery
+      details with you by email or WhatsApp.</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span><strong>We deliver the eBike</strong><br />We bring the bike and included equipment to your hotel,
+      accommodation or another agreed meeting point.</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span><strong>Get ready to ride</strong><br />We provide a quick operating and safety briefing before
+      you begin your ride.</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span><strong>Explore at your own pace</strong><br />Enjoy Costa da Caparica, Almada and the surrounding area
+      independently.</span></li>
+        </ol>
+      </div>
+      <div class="prose reveal" id="delivery">
+        <p class="eyebrow eyebrow--lime">Anywhere here</p>
+        <h2>Free eBike Delivery Areas</h2>
+        <p>Free local delivery is available in Costa da Caparica, Almada, Aroeira,
+        Charneca da Caparica, Seixal, Fonte da Telha, Lisbon, Other nearby areas, subject to availability. Delivery to Lisbon, 
+          Seixal and locations outside the standard area may require confirmation and an additional charge. 
+          We confirm the delivery location, time and any applicable cost before the booking is finalized.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--sand" id="know">
+  <div class="wrap wrap--narrow">
+    <header class="sec__head reveal" style="margin-bottom:2rem">
+      <p class="eyebrow">Before you book</p>
+      <h2 class="sec__h">Rental Requirements and Safety</h2>
+    </header>
+    <div class="prose reveal">
+      <ul class="ticks">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span><strong>No driving licence required</strong> <br />You don’t need a driving licence to use our electric bikes.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span><strong>Basic cycling confidence recommended</strong><br />   Riders should feel comfortable balancing, steering and
+      controlling a bicycle independently.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span><strong>Helmet included</strong><br /> We provide a safety helmet with every rental.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span><strong>Safety briefing provided</strong><br />  Assistance level, hills, terrain, wind and rider weight
+      can affect the estimated range.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span><strong>Standard bikes available</strong><br />  Non-electric bicycles can also be arranged on request.</span></li>
+      </ul>
+      <div class="note">
+        <strong>Not sure whether the bike is suitable for your height or planned
+    route?</strong> Contact us before booking and we’ll help you choose.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--bone" id="where-to-ride">
+  <div class="wrap">
+    <header class="sec__head reveal" style="text-align:center;margin-inline:auto;margin-bottom:2rem">
+      <p class="eyebrow">Explore independently</p>
+      <h2 class="sec__h">Where Can You Ride Your eBike?</h2>
+      <p class="sec__lede" style="margin-inline:auto">Renting an eBike gives you the freedom to explore the south bank of Lisbon at your own pace, from coastal roads and beach areas to viewpoints and quieter local surroundings.</p>
+    </header>
+    <div class="ride-ideas reveal">
+      <article>
+        <h3>Costa da Caparica Coast</h3>
+        <p>Discover the seafront, beaches and coastal surroundings without depending on public transport or parking.</p>
+      </article>
+      <article>
+        <h3>Aroeira and Fonte da Telha</h3>
+        <p>Combine coastal scenery with quieter roads and pine forest surroundings south of Costa da Caparica.</p>
+      </article>
+      <article>
+        <h3>Trafaria and Cova do Vapor</h3>
+        <p>Explore traditional riverside neighbourhoods and enjoy distinctive views towards Lisbon and the Tagus River.</p>
+      </article>
+      <article>
+        <h3>Almada Viewpoints</h3>
+        <p>Ride through Almada and discover viewpoints overlooking Lisbon, the river and the 25 de Abril Bridge.</p>
+      </article>
+    </div>
+    <p class="sec__lede reveal" style="margin-inline:auto;margin-top:2rem;text-align:center">Ask our local team for suggestions based on your available time, experience level and preferred type of ride.</p>
+  </div>
+</section>
+<section class="sec sec--bone" id="rental-faq">
+  <p>Questions before booking?</p>
+
+  <h2>Electric Bike Rental FAQ</h2>
+<div class="rental-faq__list">
+  <details>
+    <summary>How much does it cost to rent an electric bike?</summary>
+    <p>
+      Half-day rental costs €25 per bike. Full-day rates start at
+      €35 per bike and decrease for longer rentals, reaching €22.50
+      per bike, per day, for rentals of seven days or more.
+    </p>
+  </details>
+
+  <details>
+    <summary>What is included with the eBike rental?</summary>
+    <p>
+      Every rental includes an all-terrain electric bike, safety
+      helmet, bike lock, phone holder, local delivery and a quick
+      operating and safety briefing.
+    </p>
+  </details>
+
+  <details>
+    <summary>How far can I ride on one battery?</summary>
+    <p>
+      The estimated battery range is up to 80 km. Actual range
+      depends on the assistance level, terrain, hills, weather
+      conditions and rider weight.
+    </p>
+  </details>
+
+  <details>
+    <summary>Do I need a driving licence?</summary>
+    <p>
+      No driving licence is required. However, riders should have
+      basic cycling confidence and be able to control a bicycle
+      independently.
+    </p>
+  </details>
+
+  <details>
+    <summary>Do you deliver the bikes?</summary>
+    <p>
+      Yes. We arrange delivery to hotels, accommodation and agreed
+      meeting points in Costa da Caparica, Almada and surrounding
+      areas. Delivery to Lisbon, Seixal and other locations may be
+      available on request.
+    </p>
+  </details>
+
+  <details>
+    <summary>Is delivery free?</summary>
+    <p>
+      Free local delivery is included in eligible areas. Send us
+      your address when requesting the rental and we’ll confirm the
+      delivery arrangements before booking.
+    </p>
+  </details>
+
+  <details>
+    <summary>Can I rent a bike for half a day?</summary>
+    <p>
+      Yes. Half-day electric bike rental is available for €25 per
+      bike, subject to availability.
+    </p>
+  </details>
+
+  <details>
+    <summary>Are standard bicycles available?</summary>
+    <p>
+      Yes. Standard non-electric bicycles can also be arranged on
+      request.
+    </p>
+  </details>
+
+  <details>
+    <summary>How do I confirm my booking?</summary>
+    <p>
+      Send us your dates, number of bikes and delivery location.
+      We’ll check availability and contact you by email or WhatsApp
+      with the booking and payment details.
+    </p>
+  </details>
+
+  <details>
+    <summary>What happens if the weather is unsafe?</summary>
+    <p>
+      If weather conditions make riding unsafe, contact our team so
+      we can review the booking and the available alternatives.
+    </p>
+  </details>
+</div>
+</section>
+<section class="sec">
+  <div class="wrap wrap--narrow">
+    <header class="sec__head reveal" style="text-align:center;margin-inline:auto">
+      <p class="eyebrow">Reserve your ride</p>
+      <h2 class="sec__h">Check eBike Availability</h2>
+      <p class="sec__lede" style="margin-inline:auto">Tell us when, and we'll confirm within the day.
+        A 50% deposit confirms your booking — refundable up to a week before you ride.</p>
+    </header>
+
+    <form class="form reveal" id="book" novalidate action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="a9aee6c0-a1da-4151-a106-15e962503764">
+      <input type="hidden" name="subject" value="New booking request - eCoasters">
+      <input type="hidden" name="from_name" value="eCoasters website">
+      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+      <div class="f">
+        <label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+        <p class="err" id="e-name" hidden></p>
+      </div>
+      <div class="f">
+        <label for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
+        <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+        <p class="err" id="e-email" hidden></p>
+      </div>
+      <div class="f-row">
+        <div class="f">
+          <label for="f-phone">Phone</label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+          <p class="hint">So we can reach you on WhatsApp.</p>
+        </div>
+        <div class="f">
+          <label for="f-people">Riders <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-people" name="people" type="number" min="1" max="20" placeholder="How many?" inputmode="numeric" required>
+          <p class="err" id="e-people" hidden></p>
+        </div>
+      </div>
+      <div class="f-row" id="whatRow">
+        <div class="f">
+          <label for="f-tour">What for <span class="req" aria-hidden="true">*</span></label>
+          <select id="f-tour" name="tour" required>
+            <option value="Bike rental" selected>Bike rental</option>
+          </select>
+        </div>
+        <div class="f" id="tourDateField">
+          <label for="f-date">Preferred date &amp; time <span class="opt">(optional)</span></label>
+          <div class="dt">
+            <input id="f-date" name="date" type="date" aria-label="Preferred date">
+            <input id="f-time" name="time" type="time" aria-label="Preferred time">
+          </div>
+          <p class="err" id="e-date" hidden></p>
+          <p class="err" id="e-time" hidden></p>
+        </div>
+      </div>
+      <div class="f-row" id="rentalDates" hidden>
+        <div class="f">
+          <label for="f-pickup-date">Bike pick-up <span class="req" aria-hidden="true">*</span></label>
+          <div class="dt">
+            <input id="f-pickup-date" name="pickup_date" type="date" aria-label="Pick-up date">
+            <input id="f-pickup-time" name="pickup_time" type="time" aria-label="Pick-up time">
+          </div>
+          <p class="hint">Day &amp; time you collect the bike.</p>
+          <p class="err" id="e-pickup-date" hidden></p>
+          <p class="err" id="e-pickup-time" hidden></p>
+        </div>
+        <div class="f">
+          <label for="f-return-date">Bike drop-off <span class="req" aria-hidden="true">*</span></label>
+          <div class="dt">
+            <input id="f-return-date" name="return_date" type="date" aria-label="Drop-off date">
+            <input id="f-return-time" name="return_time" type="time" aria-label="Drop-off time">
+          </div>
+          <p class="hint">Day &amp; time you return it.</p>
+          <p class="err" id="e-return-date" hidden></p>
+          <p class="err" id="e-return-time" hidden></p>
+        </div>
+      </div>
+      <div class="calc" id="rentalCalc" hidden aria-live="polite">
+        <div class="calc__top">
+          <span class="calc__label">Estimated total</span>
+          <span class="calc__total num" id="calcTotal">—</span>
+        </div>
+        <p class="calc__break" id="calcBreak"></p>
+        <p class="calc__note">Estimate only — we'll confirm your booking.</p>
+      </div>
+      <div class="f">
+        <label for="f-promo">Promo code</label>
+        <input id="f-promo" name="promocode" type="text" autocomplete="off" placeholder="If you have one">
+      </div>
+      <div class="f">
+        <label for="f-msg">Anything we should know?</label>
+        <textarea id="f-msg" name="message" rows="3" placeholder="Kids riding with you, hotel pick-up, mobility needs…"></textarea>
+      </div>
+      <button class="btn btn--lime btn--full btn--lg" type="submit" id="submitBtn">Request a booking
+        <svg class="ico-arr" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button>
+      <p class="form__alt">or <button type="button" class="linkish" id="waSend">send this on WhatsApp</button></p>
+      <p class="form__fine">We reply within the day. Your details are only used to organise your booking.</p>
+      <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<section class="sec sec--bone more">
+  <div class="wrap">
+    <header class="sec__head reveal"><p class="eyebrow">Keep looking</p><h2 class="sec__h">Prefer a Guided eBike Tour?</h2></header>
+    <div class="more__grid">
+      <a class="more__c reveal" href="/lisbons-hidden-gem-ebike-tour/">
+        <img src="/assets/img/hg-hero.jpg" width="1200" height="auto" alt="Two riders on eBikes on a coastal trail at sunset during the Lisbon's Hidden Gem tour in Costa da Caparica" loading="lazy" decoding="async">
+        <div class="more__b">
+          <h3>Lisbon's Hidden Gem (Costa da Caparica)</h3>
+          <p><span class="num">€40</span> · 3 h · Easy</p>
+        </div>
+      </a>
+      <a class="more__c reveal" href="/overlooking-lisbon-ebike-tour-almada/">
+        <img src="/assets/img/overlooking-hero.jpg" width="1200" height="auto" alt="Three riders celebrating at an Almada viewpoint with the 25 de Abril Bridge and Lisbon behind" loading="lazy" decoding="async">
+        <div class="more__b">
+          <h3>Overlooking Lisbon (Almada)</h3>
+          <p><span class="num">€40</span> · 3 h · Easy</p>
+        </div>
+      </a>
+      <a class="more__c reveal" href="/into-the-woods/">
+        <img src="/assets/img/woods-hero.jpg" width="1200" height="auto" alt="Four riders with all-terrain eBikes on a clifftop above the Atlantic coast at Costa da Caparica" loading="lazy" decoding="async">
+        <div class="more__b">
+          <h3>Into the Woods</h3>
+          <p><span class="num">€40</span> · 2 h · Intermediate</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="ft">
+  <div class="wrap ft4">
+    <div>
+      <img class="ft__logo" src="/assets/brand/logo-full-lime.svg" alt="eCoasters" width="308" height="300" loading="lazy" decoding="async">
+      <p class="ft__tag">eBike tours &amp; rentals<br>Costa da Caparica, Almada, Portugal
+15 minutes from Lisbon</p>
+      <div class="ft__social">
+        <a href="https://www.instagram.com/ecoasters.tours" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c-2.72 0-3.06.01-4.12.06-1.07.05-1.8.22-2.43.47-.66.25-1.22.6-1.77 1.15-.55.55-.9 1.11-1.15 1.77-.25.63-.42 1.36-.47 2.43C2.01 8.94 2 9.28 2 12s.01 3.06.06 4.12c.05 1.07.22 1.8.47 2.43.25.66.6 1.22 1.15 1.77.55.55 1.11.9 1.77 1.15.63.25 1.36.42 2.43.47 1.06.05 1.4.06 4.12.06s3.06-.01 4.12-.06c1.07-.05 1.8-.22 2.43-.47.66-.25 1.22-.6 1.77-1.15.55-.55.9-1.11 1.15-1.77.25-.63.42-1.36.47-2.43.05-1.06.06-1.4.06-4.12s-.01-3.06-.06-4.12c-.05-1.07-.22-1.8-.47-2.43a4.9 4.9 0 0 0-1.15-1.77 4.9 4.9 0 0 0-1.77-1.15c-.63-.25-1.36-.42-2.43-.47C15.06 2.01 14.72 2 12 2Zm0 1.8c2.68 0 3 .01 4.04.06.98.04 1.5.2 1.86.34.47.18.8.4 1.15.75.35.35.57.68.75 1.15.14.36.3.88.34 1.86.05 1.04.06 1.36.06 4.04s-.01 3-.06 4.04c-.04.98-.2 1.5-.34 1.86-.18.47-.4.8-.75 1.15-.35.35-.68.57-1.15.75-.36.14-.88.3-1.86.34-1.04.05-1.36.06-4.04.06s-3-.01-4.04-.06c-.98-.04-1.5-.2-1.86-.34a3.1 3.1 0 0 1-1.15-.75 3.1 3.1 0 0 1-.75-1.15c-.14-.36-.3-.88-.34-1.86C3.81 15 3.8 14.68 3.8 12s.01-3 .06-4.04c.04-.98.2-1.5.34-1.86.18-.47.4-.8.75-1.15.35-.35.68-.57 1.15-.75.36-.14.88-.3 1.86-.34C9 3.81 9.32 3.8 12 3.8Zm0 3.06a5.14 5.14 0 1 0 0 10.28 5.14 5.14 0 0 0 0-10.28Zm0 8.48a3.34 3.34 0 1 1 0-6.68 3.34 3.34 0 0 1 0 6.68Zm5.34-8.7a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z"/></svg></a>
+        <a href="https://www.facebook.com/people/ECoasters-Electric-Bike-Tours/61570017095799/?sk=about" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.6 21.5v-8.6h2.86l.43-3.32H13.6V7.44c0-.96.27-1.62 1.65-1.62h1.76V2.85a23.6 23.6 0 0 0-2.57-.13c-2.54 0-4.28 1.55-4.28 4.4v2.45H7.29v3.32h2.87v8.6h3.44Z"/></svg></a>
+        <a href="https://www.tiktok.com/@ecoasters?is_from_webapp=1&amp;sender_device=pc" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path transform="translate(-1 0)" d="M16.6 2.75c.3 1.62 1.2 2.9 2.72 3.53.66.28 1.38.42 2.1.42v3.4c-1.68 0-3.3-.52-4.62-1.5v6.82a6.14 6.14 0 1 1-6.14-6.14c.32 0 .63.02.94.07v3.5a2.7 2.7 0 1 0 1.86 2.57V2.75h3.28Z"/></svg></a>
+        <a href="https://wa.me/351969638466" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-6.4-5.6c-.5-.9-.8-1.8-.8-2.6 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4-.1.5l-.4.5c-.1.2-.3.3-.1.6a8 8 0 0 0 3.7 3.2c.3.1.5.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l2 1c.3.1.4.2.5.3z"/></svg></a>
+      </div>
+    </div>
+
+    <nav aria-label="Tours">
+      <h3>Tours</h3>
+      <a href="/into-the-woods/">Into the Woods (Adventure)</a>
+      <a href="/lisbons-hidden-gem-ebike-tour/">Lisbon's Hidden Gem (Costa da Caparica)</a>
+      <a href="/overlooking-lisbon-ebike-tour-almada/">Overlooking Lisbon (Almada)</a>
+    </nav>
+
+    <nav aria-label="Rentals">
+      <h3>Rentals</h3>
+      <a href="/electric-bike-rental/">eBike rental</a>
+      <a href="/electric-bike-rental/#delivery">Delivery areas</a>
+    </nav>
+
+    <nav aria-label="Company">
+      <h3>Company</h3>
+      <a href="/#about">About us</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#contact">Contact</a>
+      <a href="/termsandconditions/">Terms &amp; Conditions</a>
+      <a href="/privacypolicy/">Privacy Policy</a>
+    </nav>
+
+    <div>
+      <h3>Pick-up &amp; drop-off</h3>
+      <div class="ft__pick">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h2l2-5h8l2 5h2v4h-2a2 2 0 1 1-4 0H9a2 2 0 1 1-4 0H3z"/></svg>
+        <span><b>On request</b><span>Tell us where you're staying</span></span>
+      </div>
+      <ul class="ft__areas">
+        <li>Costa da Caparica</li><li>Almada</li><li>Aroeira</li>
+        <li>Charneca da Caparica</li><li>Seixal</li><li>Fonte da Telha</li>
+        <li>Lisbon</li><li>&amp; Others</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap ft__legal">
+    <p class="num">© 2026 eCoasters · Rotinas da Natureza, Lda · RNAAT 1223/2024</p>
+    <p><a href="tel:+351969638466" class="num">+351 969 638 466</a> · <a href="mailto:ecoasters24@gmail.com">ecoasters24@gmail.com</a></p>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/351969638466" aria-label="Message us on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-6.4-5.6c-.5-.9-.8-1.8-.8-2.6 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4-.1.5l-.4.5c-.1.2-.3.3-.1.6a8 8 0 0 0 3.7 3.2c.3.1.5.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l2 1c.3.1.4.2.5.3z"/></svg></a>
+
+<div class="cta-bar" id="ctaBar" hidden>
+  <div class="cta-bar__txt"><strong>From €22.50</strong><span>Refundable up to 1 week before</span></div>
+  <a class="btn btn--lime btn--sm" href="#book">Book now</a>
+</div>
+
+<script>
+  document.querySelectorAll('[data-bike-gallery]').forEach(function (gallery) {
+    var mainImage = gallery.querySelector('[data-bike-main]');
+    var buttons = Array.from(gallery.querySelectorAll('.bike-gallery__thumb'));
+
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        mainImage.src = button.dataset.src;
+        mainImage.alt = button.dataset.alt;
+        mainImage.width = Number(button.dataset.width);
+        mainImage.height = Number(button.dataset.height);
+
+        buttons.forEach(function (item) {
+          item.setAttribute('aria-pressed', item === button ? 'true' : 'false');
+        });
+      });
+    });
+  });
+</script>
+<script src="/assets/main.js?v=96" defer></script>
+</body>
+</html>
