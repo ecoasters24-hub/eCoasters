@@ -43,6 +43,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.ecoasters.pt/bike-rental-aroeira/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.ecoasters.pt/termsandconditions/</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>yearly</changefreq>
