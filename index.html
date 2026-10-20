@@ -38,6 +38,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="/assets/styles.css?v=95">
 <link rel="manifest" href="/manifest.webmanifest">
 
+<style>
+  /* ── Mobile-only hero refinements (desktop unchanged) ── */
+  @media (max-width: 640px) {
+    /* Locations pill on a single line */
+    .hero .kicker { font-size: .62rem; letter-spacing: .06em; white-space: nowrap;
+                    padding: .42rem .85rem; margin-bottom: var(--s3); }
+    /* Check availability + WhatsApp side by side on one row */
+    .hero .hero__cta { flex-wrap: nowrap; gap: .55rem; margin-bottom: var(--s4); }
+    .hero .hero__cta .btn { flex: 1 1 0; min-width: 0; padding: .9rem .55rem;
+                            font-size: .75rem; letter-spacing: .01em; justify-content: center; white-space: nowrap; }
+    .hero .hero__cta .btn svg { flex: none; width: 15px; height: 15px; }
+    /* More breathing room between the stacked hero blocks */
+    .hero .hero__h { margin-bottom: var(--s3); }
+    .hero .hero__rent { margin-bottom: var(--s4) !important; }
+    .hero .hero__rating { margin-bottom: var(--s3); }
+    .hero .hero__p { margin-bottom: var(--s4); }
+    .hero .hstrip { gap: var(--s3) var(--s4); }
+  }
+</style>
+
 <!-- Entrance animations start from opacity:0. Only hide content if JS is here to
      bring it back — otherwise the page is blank without scripts. The timer is the
      safety net for main.js failing to load: after 2.5s, show everything anyway. -->
