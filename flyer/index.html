@@ -38,6 +38,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="/assets/styles.css?v=95">
 <link rel="manifest" href="/manifest.webmanifest">
 
+<style>
+  /* ── Flyer-only tweaks ─────────────────────────────────────
+     Stronger hero scrim so the copy stays legible over the bright
+     sky / coastline in the cover photo (the default .phero scrim is
+     kept light site-wide; this is scoped to the flyer hero only). */
+  #top.phero .phero__scrim {
+    background:
+      linear-gradient(180deg, rgba(var(--ink-rgb),.62) 0%, rgba(var(--ink-rgb),.24) 15%,
+                              rgba(var(--ink-rgb),.08) 38%, rgba(var(--ink-rgb),.58) 74%,
+                              rgba(var(--ink-rgb),.90) 100%),
+      linear-gradient(90deg, rgba(var(--ink-rgb),.58) 0%, rgba(var(--ink-rgb),.14) 56%, transparent 80%);
+  }
+  #top.phero .phero__in { text-shadow: 0 2px 20px rgba(0,0,0,.70); }
+  #top.phero .phero__in .btn { text-shadow: none; }
+</style>
+
 <script>
   document.documentElement.classList.add('js');
   setTimeout(function () {
@@ -311,8 +327,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="calc__note">Estimate only — we'll confirm your booking.</p>
       </div>
       <div class="f">
-        <label for="f-promo">Promo code</label>
-        <input id="f-promo" name="promocode" type="text" autocomplete="off" placeholder="If you have one">
+        <label for="f-promo">Promo code <span class="req" aria-hidden="true">*</span></label>
+        <input id="f-promo" name="promocode" type="text" autocomplete="off" required placeholder="From your flyer">
+        <p class="err" id="e-promo" hidden></p>
       </div>
       <div class="f">
         <label for="f-msg">Anything we should know?</label>
@@ -379,6 +396,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <a class="wa" href="https://wa.me/351969638466" aria-label="Message us on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-6.4-5.6c-.5-.9-.8-1.8-.8-2.6 0-.9.5-1.4.7-1.6.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4-.1.5l-.4.5c-.1.2-.3.3-.1.6a8 8 0 0 0 3.7 3.2c.3.1.5.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l2 1c.3.1.4.2.5.3z"/></svg></a>
+
+<!-- Flyer-only: make the promo code a required field without touching the global
+     validation in main.js. A capture-phase guard on document runs BEFORE main.js's
+     own submit / WhatsApp handlers, so an empty code blocks both. -->
+<script>
+  (function () {
+    var form  = document.getElementById('book');
+    var promo = document.getElementById('f-promo');
+    if (!form || !promo) return;
+    var box    = document.getElementById('e-promo');
+    var status = document.getElementById('formStatus');
+    var MSG    = 'Add the promo code from your flyer.';
+
+    function showErr () {
+      promo.setAttribute('aria-invalid', 'true');
+      if (box) { box.textContent = MSG; box.hidden = false; promo.setAttribute('aria-describedby', 'e-promo'); }
+    }
+    function clearErr () {
+      promo.removeAttribute('aria-invalid');
+      if (box) { box.hidden = true; promo.removeAttribute('aria-describedby'); }
+    }
+    function guard (e) {
+      if (promo.value.trim()) { clearErr(); return; }
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      showErr();
+      if (status) { status.textContent = 'Add your promo code to continue.'; status.dataset.state = 'bad'; }
+      promo.focus();
+    }
+
+    // Capture phase on document → fires before the form's own AT_TARGET listeners.
+    document.addEventListener('submit', function (e) { if (e.target === form) guard(e); }, true);
+    document.addEventListener('click', function (e) {
+      if (e.target.closest && e.target.closest('#waSend')) guard(e);
+    }, true);
+    promo.addEventListener('input', function () { if (promo.getAttribute('aria-invalid')) clearErr(); });
+  })();
+</script>
 
 <script src="/assets/main.js?v=95" defer></script>
 </body>
